@@ -24,7 +24,8 @@ def values(message: telebot.types.Message):
 @bot.message_handler(content_types=['text'])
 def get_price(message: telebot.types.Message):
     try:
-        values = message.text.lower().split(' ')
+        values1 = message.text.lower()
+        values = values1.split()
 
         if len(values) != 3:
             raise ConvertionException('Введите команду или 3 параметра')
