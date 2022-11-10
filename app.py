@@ -37,7 +37,7 @@ def get_price(message: telebot.types.Message):
     except CryptoConverter as e:
         bot.reply_to(message, f'Что-то пошло не так с {e}')
     else:
-        text = f'Перевожу {amount} {keys[quote]} в {keys[base]}. \n{amount} {keys[quote]} = {result} {keys[base]}'
+        text = f'Перевожу {amount} {keys[quote]} в {keys[base]}. \n{amount} {keys[quote]} = {total_base} {keys[base]}'
         bot.send_message(message.chat.id, text)
 
 
